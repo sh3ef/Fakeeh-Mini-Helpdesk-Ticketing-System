@@ -1,0 +1,245 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-07-09 19:38+0300\n"
+"PO-Revision-Date: 2025-07-09 19:38+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app.py:27
+msgid "الرجاء تسجيل الدخول أولاً"
+msgstr "الرجاء تسجيل الدخول أولاً"
+
+#: app.py:36
+msgid "ليس لديك الصلاحية للوصول لهذه الصفحة"
+msgstr "ليس لديك الصلاحية للوصول لهذه الصفحة"
+
+#: app.py:64
+#, python-format
+msgid "أهلاً بعودتك, %(name)s!"
+msgstr "أهلاً بعودتك, %(name)s!"
+
+#: app.py:67
+msgid "البريد الإلكتروني أو كلمة المرور غير صحيحة"
+msgstr "البريد الإلكتروني أو كلمة المرور غير صحيحة"
+
+#: app.py:73
+msgid "تم تسجيل خروجك بنجاح"
+msgstr "تم تسجيل خروجك بنجاح"
+
+#: app.py:92
+msgid "الرجاء ملء جميع الحقول"
+msgstr "الرجاء ملء جميع الحقول"
+
+#: app.py:95
+msgid "تم إنشاء التذكرة بنجاح"
+msgstr "تم إنشاء التذكرة بنجاح"
+
+#: app.py:102
+msgid "التذكرة غير موجودة"
+msgstr "التذكرة غير موجودة"
+
+#: app.py:106
+msgid "ليس لديك الصلاحية لعرض هذه التذكرة"
+msgstr "ليس لديك الصلاحية لعرض هذه التذكرة"
+
+#: app.py:116
+msgid "لا يمكن إرسال رد فارغ"
+msgstr "لا يمكن إرسال رد فارغ"
+
+#: app.py:119
+msgid "تم إضافة ردك بنجاح"
+msgstr "تم إضافة ردك بنجاح"
+
+#: app.py:124
+msgid "تم إغلاق التذكرة بنجاح"
+msgstr "تم إغلاق التذكرة بنجاح"
+
+#: templates/base.html:6
+msgid "نظام الدعم الفني"
+msgstr "نظام الدعم الفني"
+
+#: templates/base.html:36
+msgid "نظام الدعم - كلية فقيه"
+msgstr "نظام الدعم - كلية فقيه"
+
+#: templates/base.html:51
+msgid "أهلاً"
+msgstr "أهلاً"
+
+#: templates/base.html:55
+msgid "تسجيل الخروج"
+msgstr "تسجيل الخروج"
+
+#: templates/create_ticket.html:3 templates/create_ticket.html:10
+#: templates/dashboard.html:137
+msgid "إنشاء تذكرة جديدة"
+msgstr "إنشاء تذكرة جديدة"
+
+#: templates/create_ticket.html:15
+msgid "عنوان التذكرة"
+msgstr "عنوان التذكرة"
+
+#: templates/create_ticket.html:19
+msgid "وصف المشكلة"
+msgstr "وصف المشكلة"
+
+#: templates/create_ticket.html:22
+msgid "إرسال التذكرة"
+msgstr "إرسال التذكرة"
+
+#: templates/create_ticket.html:23
+msgid "إلغاء"
+msgstr "إلغاء"
+
+#: templates/dashboard.html:3
+msgid "لوحة التحكم"
+msgstr "لوحة التحكم"
+
+#: templates/dashboard.html:18
+msgid "لوحة تحكم المشرف"
+msgstr "لوحة تحكم المشرف"
+
+#: templates/dashboard.html:20
+msgid "لوحة التحكم الخاصة بي"
+msgstr "لوحة التحكم الخاصة بي"
+
+#: templates/dashboard.html:25
+msgid "إدارة جميع التذاكر والردود"
+msgstr "إدارة جميع التذاكر والردود"
+
+#: templates/dashboard.html:27
+msgid "عرض وإدارة تذاكرك"
+msgstr "عرض وإدارة تذاكرك"
+
+#: templates/dashboard.html:33
+msgid "تذكرة جديدة"
+msgstr "تذكرة جديدة"
+
+#: templates/dashboard.html:46
+msgid "إجمالي التذاكر"
+msgstr "إجمالي التذاكر"
+
+#: templates/dashboard.html:53
+msgid "تذاكر مفتوحة"
+msgstr "تذاكر مفتوحة"
+
+#: templates/dashboard.html:60
+msgid "تذاكر مغلقة"
+msgstr "تذاكر مغلقة"
+
+#: templates/dashboard.html:67
+msgid "المستخدمين"
+msgstr "المستخدمين"
+
+#: templates/dashboard.html:79
+msgid "جميع التذاكر"
+msgstr "جميع التذاكر"
+
+#: templates/dashboard.html:81
+msgid "تذاكري"
+msgstr "تذاكري"
+
+#: templates/dashboard.html:88
+msgid "الكل"
+msgstr "الكل"
+
+#: templates/dashboard.html:108
+msgid "Open"
+msgstr "مفتوحة"
+
+#: templates/dashboard.html:110
+msgid "Closed"
+msgstr "مغلقة"
+
+#: templates/dashboard.html:117
+msgid "غير محدد"
+msgstr "غير محدد"
+
+#: templates/dashboard.html:123
+msgid "عرض التفاصيل"
+msgstr "عرض التفاصيل"
+
+#: templates/dashboard.html:134
+msgid "لا توجد تذاكر حالياً"
+msgstr "لا توجد تذاكر حالياً"
+
+#: templates/dashboard.html:135
+msgid "ابدأ بإنشاء تذكرة جديدة"
+msgstr "ابدأ بإنشاء تذكرة جديدة"
+
+#: templates/login.html:3 templates/login.html:12
+msgid "تسجيل الدخول"
+msgstr "تسجيل الدخول"
+
+#: templates/login.html:17
+msgid "البريد الإلكتروني"
+msgstr "البريد الإلكتروني"
+
+#: templates/login.html:21
+msgid "كلمة المرور"
+msgstr "كلمة المرور"
+
+#: templates/login.html:24
+msgid "دخول"
+msgstr "دخول"
+
+#: templates/ticket_view.html:3
+msgid "عرض التذكرة"
+msgstr "عرض التذكرة"
+
+#: templates/ticket_view.html:17
+msgid "إغلاق التذكرة"
+msgstr "إغلاق التذكرة"
+
+#: templates/ticket_view.html:24
+msgid "بواسطة"
+msgstr "بواسطة"
+
+#: templates/ticket_view.html:25
+msgid "تاريخ الإنشاء"
+msgstr "تاريخ الإنشاء"
+
+#: templates/ticket_view.html:32
+msgid "الردود"
+msgstr "الردود"
+
+#: templates/ticket_view.html:47
+msgid "لا توجد ردود حتى الآن."
+msgstr "لا توجد ردود حتى الآن."
+
+#: templates/ticket_view.html:56
+msgid "إضافة رد جديد"
+msgstr "إضافة رد جديد"
+
+#: templates/ticket_view.html:59
+msgid "اكتب ردك هنا..."
+msgstr "اكتب ردك هنا..."
+
+#: templates/ticket_view.html:62
+msgid "إرسال الرد"
+msgstr "إرسال الرد"
+
+#: templates/ticket_view.html:70
+msgid "العودة إلى لوحة التحكم"
+msgstr "العودة إلى لوحة التحكم"
+
+#: templates/dashboard.html:89
+msgid "مفتوحة"
+msgstr "مفتوحة"
+
+#: templates/dashboard.html:90
+msgid "مغلقة"
+msgstr "مغلقة"

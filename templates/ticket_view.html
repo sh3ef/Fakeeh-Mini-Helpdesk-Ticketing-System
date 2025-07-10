@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('عرض التذكرة') }}: {{ ticket.title }}{% endblock %}
+
+{% block content %}
+<!-- Main ticket card -->
+<div class="card mb-4 shadow-sm border-0">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+        <h4 class="mb-0 fw-bold">{{ ticket.title }}</h4>
+        <div>
+            <span class="badge fs-6 rounded-pill text-bg-{% if ticket.status == 'Open' %}success{% else %}secondary{% endif %} me-2">
+                <i class="fas fa-{% if ticket.status == 'Open' %}unlock{% else %}lock{% endif %} me-1"></i>
+                {{ _(ticket.status) }}
+            </span>
+            {% if session.user_role == 'Admin' and ticket.status == 'Open' %}
+            <a href="{{ url_for('close_ticket', ticket_id=ticket.id) }}" class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-times-circle me-1"></i>{{ _('إغلاق التذكرة') }}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <p class="text-muted small mb-3">
+            <i class="fas fa-user"></i> {{ _('بواسطة') }}: {{ ticket.user_name }} | 
+            <i class="fas fa-calendar-alt"></i> {{ _('تاريخ الإنشاء') }}: {{ ticket.created_at.strftime('%Y-%m-%d %H:%M') }}
+        </p>
+        <p class="fs-5">{{ ticket.description }}</p>
+    </div>
+</div>
+
+<!-- Responses section -->
+<h5 class="mb-3"><i class="fas fa-comments me-2"></i>{{ _('الردود') }}</h5>
+{% if replies %}
+    {% for reply in replies %}
+    <div class="d-flex align-items-start mb-3">
+        <i class="fas fa-user-circle fa-2x me-3 text-muted"></i>
+        <div class="flex-grow-1 p-3 bg-light rounded">
+            <p class="mb-1">{{ reply.content }}</p>
+            <small class="text-muted">
+                {{ reply.user_name }} • {{ reply.created_at.strftime('%Y-%m-%d %H:%M') }}
+            </small>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <div class="text-center p-4 bg-light rounded">
+        <p class="mb-0 text-muted">{{ _('لا توجد ردود حتى الآن.') }}</p>
+    </div>
+{% endif %}
+
+
+<!-- New Reply Addition Form-->
+{% if ticket.status == 'Open' %}
+<div class="card mt-4 shadow-sm border-0">
+    <div class="card-body p-4">
+        <h5 class="mb-3">{{ _('إضافة رد جديد') }}</h5>
+        <form method="POST" action="{{ url_for('add_reply', ticket_id=ticket.id) }}">
+            <div class="mb-3">
+                <textarea class="form-control" name="content" rows="4" placeholder="{{ _('اكتب ردك هنا...') }}" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane me-2"></i>{{ _('إرسال الرد') }}
+            </button>
+        </form>
+    </div>
+</div>
+{% endif %}
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-link text-secondary mt-4">
+    <i class="fas fa-arrow-left me-1"></i>{{ _('العودة إلى لوحة التحكم') }}
+</a>
+{% endblock %}

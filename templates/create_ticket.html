@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('إنشاء تذكرة جديدة') }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-light py-3">
+                <h3 class="mb-0"><i class="fas fa-plus-circle me-2 text-primary"></i>{{ _('إنشاء تذكرة جديدة') }}</h3>
+            </div>
+            <div class="card-body p-4">
+                <form method="POST" action="{{ url_for('create_ticket') }}">
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-bold">{{ _('عنوان التذكرة') }}</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label fw-bold">{{ _('وصف المشكلة') }}</label>
+                        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane me-2"></i>{{ _('إرسال التذكرة') }}</button>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary"><i class="fas fa-times me-2"></i>{{ _('إلغاء') }}</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
